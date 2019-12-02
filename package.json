@@ -18,7 +18,8 @@
     "awesome-typescript-loader": "5.2.1",
     "typescript": "3.7.2",
     "webpack": "4.41.2",
-    "webpack-dev-server": "3.9.0"
+    "webpack-dev-server": "3.9.0",
+    "webpack-cli": "^3.3.10"
   },
   "author": "Ultimate Angular",
   "license": "MIT",
@@ -26,7 +27,5 @@
     "url": "https://github.com/UltimateAngular/typescript-basics-seed/issues"
   },
   "homepage": "https://github.com/UltimateAngular/typescript-basics-seed#readme",
-  "dependencies": {
-    "webpack-cli": "^3.3.10"
-  }
+  "dependencies": {}
 }
