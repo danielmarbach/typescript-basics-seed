@@ -1,8 +1,14 @@
-const toppings = ['bacon', 'chilli'];
+const pizza = { name: 'pepperoni' };
 
-const newToppings = ['pepperoni'];
+const toppings = ['pepperoni'];
 
-// copy semantics
-const allToppings = [...toppings, ...newToppings];
+// copy
+const order = {
+    ...pizza,
+    toppings,
+};
 
-console.log(allToppings);
+// copy
+const finalOrder = { ...order };
+
+console.log(finalOrder);
