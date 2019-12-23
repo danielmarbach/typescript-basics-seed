@@ -1,12 +1,7 @@
-const pizzas: number = 5;
+let coupon: any; // last resort
 
-function offerDiscount(orders: number): boolean {
-    return orders >= 3;
-}
+coupon = 25;
 
-if (offerDiscount(pizzas)) {
-    console.log(`Your are entitled to a discount!`);
-}
-else {
-    console.log(`Order more than 3 pizzas for a discount!`)
-};
+coupon = '25';
+
+coupon = true;
