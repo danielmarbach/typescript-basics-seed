@@ -1,9 +1,12 @@
-const coupon: string = 'pizza25';
+const pizzas: number = 5;
 
-function normalizeCoupon(code: string): string {
-    return code.toUpperCase();
+function offerDiscount(orders: number): boolean {
+    return orders >= 3;
 }
 
-const couponMessage: string = `The final coupoing is ${normalizeCoupon(coupon)}`;
-
-console.log(couponMessage);
+if (offerDiscount(pizzas)) {
+    console.log(`Your are entitled to a discount!`);
+}
+else {
+    console.log(`Order more than 3 pizzas for a discount!`)
+};
