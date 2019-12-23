@@ -1,5 +1,9 @@
-let implicitCoupon = 'pizza25'.toUpperCase(); // stirng is infered
-let explicitCoupon: string = 'pizza25'.toUpperCase();
-let wronglyInferedCoupon; // should use : string
+let selectedTopping: string = 'pepperoni';
 
-wronglyInferedCoupon = 'pizza25';
+function selectTopping(topping: string): void { // void can also be infered
+    selectedTopping = topping; // impure function
+}
+
+selectTopping('bacon');
+
+console.log(selectedTopping);
