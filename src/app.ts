@@ -1,7 +1,5 @@
-let coupon: any; // last resort
+let implicitCoupon = 'pizza25'.toUpperCase(); // stirng is infered
+let explicitCoupon: string = 'pizza25'.toUpperCase();
+let wronglyInferedCoupon; // should use : string
 
-coupon = 25;
-
-coupon = '25';
-
-coupon = true;
+wronglyInferedCoupon = 'pizza25';
