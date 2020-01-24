@@ -1,11 +1,20 @@
-let coupon: string | null = 'pizza25'; // discriminated union type
+let pizzaSize: string = 'small';
 
-function removeCoupon(): void {
-    coupon = null;
+function selectSize(size: 'small' | 'medium' | 'large'): void {
+    pizzaSize = size;
 }
 
-console.log(coupon);
+selectSize('medium');
 
-removeCoupon();
+console.log(`Pizza size: ${pizzaSize}`);
 
-console.log(coupon);
+let pizzaSizeNumber: number = 1;
+
+// works also for boolean and enums
+function selectSizeNumber(size: 1 | 2 | 3): void {
+    pizzaSizeNumber = size;
+}
+
+selectSizeNumber(3);
+
+console.log(`Pizza size: ${pizzaSizeNumber}`);
