@@ -1,9 +1,23 @@
-// optional parameter
-let sumOrder: (price: number, quantity?: number) => number;
+let pizza: { name: string, price: number };
 
-// default params
-sumOrder = (x, y = 1) => x * y;
+pizza = {
+    name: 'Plain Old Pepperoni',
+    price: 20,
+};
 
-const sum = sumOrder(25);
+let pizzaInline: { name: string, price: number } = {
+    name: 'Plain Old Pepperoni',
+    price: 20,
+};
 
-console.log(`Total sum: ${sum}`);
+let pizzaWithFunction: { name: string, price: number, getName(): string };
+
+pizzaWithFunction = {
+    name: 'Plain Old Pepperoni',
+    price: 20,
+    getName() {
+        return pizzaWithFunction.name;
+    },
+};
+
+console.log(pizzaWithFunction.getName());
