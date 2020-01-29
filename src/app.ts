@@ -1,23 +1,15 @@
-let pizza: { name: string, price: number };
+let sizes: string[];
 
-pizza = {
-    name: 'Plain Old Pepperoni',
-    price: 20,
-};
+sizes = ['small', 'medium', 'large'];
 
-let pizzaInline: { name: string, price: number } = {
-    name: 'Plain Old Pepperoni',
-    price: 20,
-};
+let sizesNumber: number[];
 
-let pizzaWithFunction: { name: string, price: number, getName(): string };
+sizesNumber = [1, 2, 3];
 
-pizzaWithFunction = {
-    name: 'Plain Old Pepperoni',
-    price: 20,
-    getName() {
-        return pizzaWithFunction.name;
-    },
-};
+let toppings: string[];
 
-console.log(pizzaWithFunction.getName());
+toppings = ['pepperoni', 'tomato', 'bacon'];
+
+let toppingsAsArray: Array<string>;
+
+toppingsAsArray = toppings;
