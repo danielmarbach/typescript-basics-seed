@@ -1,15 +1,6 @@
-let sizes: string[];
+// tupple
+let pizza: [string, number, boolean];
 
-sizes = ['small', 'medium', 'large'];
-
-let sizesNumber: number[];
-
-sizesNumber = [1, 2, 3];
-
-let toppings: string[];
-
-toppings = ['pepperoni', 'tomato', 'bacon'];
-
-let toppingsAsArray: Array<string>;
-
-toppingsAsArray = toppings;
+pizza = [
+    'Pepperoni', 20, true,
+];
