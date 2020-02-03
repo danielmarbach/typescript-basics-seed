@@ -1,12 +1,11 @@
-// can also be exported
-type Size = 'small' | 'medium' | 'large';
-// function type
-type Callback = (size: Size) => void;
+type Pizza = { name: string, toppings: number };
 
-let pizzaSize: Size = 'small';
+const pizza: Pizza = { name: 'Blazzing Inferno', toppings: 5 };
 
-const selectSize: Callback = (size) => {
-    pizzaSize = size;
+const serialized = JSON.stringify(pizza);
+
+function getNameFromJson(obj: string) {
+    return (JSON.parse(obj) as Pizza)?.name;
 }
 
-selectSize('medium');
+console.log(getNameFromJson(serialized));
