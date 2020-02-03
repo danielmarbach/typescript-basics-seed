@@ -1,6 +1,12 @@
-// tupple
-let pizza: [string, number, boolean];
+// can also be exported
+type Size = 'small' | 'medium' | 'large';
+// function type
+type Callback = (size: Size) => void;
 
-pizza = [
-    'Pepperoni', 20, true,
-];
+let pizzaSize: Size = 'small';
+
+const selectSize: Callback = (size) => {
+    pizzaSize = size;
+}
+
+selectSize('medium');
