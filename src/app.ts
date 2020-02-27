@@ -4,7 +4,7 @@ interface Sizes {
 
 interface Pizza extends Sizes {
     name: string;
-
+    toppings?: number;
     getAvailableSizes(): string[];
 };
 
