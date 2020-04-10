@@ -1,5 +1,5 @@
 class Sizes {
-    constructor(public sizes: string[]) { }
+    constructor(protected sizes: string[]) { }
 
     set availableSizes(sizes: string[]) {
         this.sizes = sizes;
@@ -10,16 +10,13 @@ class Sizes {
     }
 }
 
-const sizes = new Sizes(['small', 'medium']);
 
-console.log(sizes.availableSizes);
-sizes.availableSizes = ['medium', 'large'];
-console.log(sizes.availableSizes);
-
-class Pizza {
+class Pizza extends Sizes {
     private toppings: string[] = [];
 
-    constructor(readonly name: string) { }
+    constructor(readonly name: string, readonly sizes: string[]) {
+        super(sizes);
+    }
 
     // by default public
     public addTopping(topping: string) {
@@ -27,6 +24,6 @@ class Pizza {
     }
 }
 
-const pizza = new Pizza('Pepperoni');
+const pizza = new Pizza('Pepperoni', ['small', 'medium']);
 pizza.addTopping('pepperoni');
 console.log(pizza);
