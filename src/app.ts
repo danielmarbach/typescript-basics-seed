@@ -1,45 +1,13 @@
-interface SizesInterface {
-    availableSizes: string[]; // can't do get and set
-}
+const date = +Date.now();
+console.log(date);
 
-abstract class Sizes implements SizesInterface {
-    constructor(protected sizes: string[]) { }
+class Coupon {
+    static readonly allowed = ['Pepperoni', 'Blazing Inferno'];
 
-    set availableSizes(sizes: string[]) {
-        this.sizes = sizes;
-    }
-
-    get availableSizes() {
-        return this.sizes;
+    static create(percentage: number) {
+        return `PIZZA_RESTAURANT_${percentage}`
     }
 }
 
-
-interface PizzaInterface extends SizesInterface {
-    readonly name: string;
-    toppings: string[];
-
-    updateSizes(sizes: string[]): void;
-    addTopping(topping: string): void;
-}
-
-class Pizza extends Sizes implements PizzaInterface {
-    toppings: string[] = [];
-
-    constructor(readonly name: string, sizes: string[]) {
-        super(sizes);
-    }
-
-    public updateSizes(sizes: string[]) {
-        this.sizes = sizes;
-    }
-
-    // by default public
-    public addTopping(topping: string) {
-        this.toppings.push(topping);
-    }
-}
-
-const pizza = new Pizza('Pepperoni', ['small', 'medium']);
-pizza.addTopping('pepperoni');
-console.log(pizza);
+console.log(Coupon.allowed);
+console.log(Coupon.create(25));
